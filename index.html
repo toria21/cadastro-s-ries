@@ -1,0 +1,206 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Séries</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2e9ff;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6a3dad;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #6a3dad;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #4d287d;
+        }
+
+        #resultado {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f5f0ff;
+            border-radius: 8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Cadastro de Séries</h1>
+
+        <label for="nome">Nome da série:</label>
+        <input type="text" id="nome" value="Modern Family">
+
+        <label for="streaming">Streaming onde a série é exibida:</label>
+        <input type="text" id="streaming" value="Disney+">
+
+        <label for="autor">Autor ou criador:</label>
+        <input type="text" id="autor" value="Christopher Lloyd e Steven Levitan">
+
+        <label for="temporadas">Quantidade de temporadas:</label>
+        <input type="number" id="temporadas" value="11">
+
+        <label for="ano">Ano de criação:</label>
+        <input type="number" id="ano" value="2009">
+
+        <label for="personagem1">Personagem 1:</label>
+        <input type="text" id="personagem1" value="Jay Pritchett">
+
+        <label for="personagem2">Personagem 2:</label>
+        <input type="text" id="personagem2" value="Claire Dunphy">
+
+        <label for="personagem3">Personagem 3:</label>
+        <input type="text" id="personagem3" value="Phil Dunphy">
+
+
+        <button onclick="salvar()">Salvar</button>
+
+        <button onclick="limpar()">Limpar</button>
+
+        <button onclick="editar()">Editar</button>
+
+        <button onclick="consultar()">Consultar</button>
+
+
+        <div id="resultado"></div>
+
+    </div>
+
+
+    <script>
+
+        let serie = {};
+
+
+    
+        function salvar() {
+
+            serie.nome = document.getElementById("nome").value;
+            serie.streaming = document.getElementById("streaming").value;
+            serie.autor = document.getElementById("autor").value;
+            serie.temporadas = document.getElementById("temporadas").value;
+            serie.ano = document.getElementById("ano").value;
+            serie.personagem1 = document.getElementById("personagem1").value;
+            serie.personagem2 = document.getElementById("personagem2").value;
+            serie.personagem3 = document.getElementById("personagem3").value;
+
+            alert("Série salva com sucesso!");
+
+        }
+
+
+        
+        function limpar() {
+
+            document.getElementById("nome").value = "";
+            document.getElementById("streaming").value = "";
+            document.getElementById("autor").value = "";
+            document.getElementById("temporadas").value = "";
+            document.getElementById("ano").value = "";
+            document.getElementById("personagem1").value = "";
+            document.getElementById("personagem2").value = "";
+            document.getElementById("personagem3").value = "";
+
+            document.getElementById("resultado").innerHTML = "";
+
+        }
+
+
+        
+        function consultar() {
+
+            document.getElementById("resultado").innerHTML =
+
+                "<h3>Informações da série</h3>" +
+
+                "<strong>Nome:</strong> " + serie.nome + "<br>" +
+
+                "<strong>Streaming:</strong> " + serie.streaming + "<br>" +
+
+                "<strong>Criadores:</strong> " + serie.autor + "<br>" +
+
+                "<strong>Temporadas:</strong> " + serie.temporadas + "<br>" +
+
+                "<strong>Ano de criação:</strong> " + serie.ano + "<br>" +
+
+                "<strong>Personagem 1:</strong> " + serie.personagem1 + "<br>" +
+
+                "<strong>Personagem 2:</strong> " + serie.personagem2 + "<br>" +
+
+                "<strong>Personagem 3:</strong> " + serie.personagem3;
+
+        }
+
+
+        
+        function editar() {
+
+            serie.nome = document.getElementById("nome").value;
+            serie.streaming = document.getElementById("streaming").value;
+            serie.autor = document.getElementById("autor").value;
+            serie.temporadas = document.getElementById("temporadas").value;
+            serie.ano = document.getElementById("ano").value;
+            serie.personagem1 = document.getElementById("personagem1").value;
+            serie.personagem2 = document.getElementById("personagem2").value;
+            serie.personagem3 = document.getElementById("personagem3").value;
+
+            alert("Informações editadas com sucesso!");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+</body>
+</html>
