@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -45,6 +45,10 @@
             border-radius: 5px;
         }
 
+        input::placeholder {
+            color: #aaa;
+        }
+
         button {
             padding: 10px 15px;
             margin-top: 20px;
@@ -78,28 +82,60 @@
         <h1>Cadastro de Séries</h1>
 
         <label for="nome">Nome da série:</label>
-        <input type="text" id="nome" value="Modern Family">
+        <input
+            type="text"
+            id="nome"
+            placeholder="Ex: Modern Family"
+        >
 
         <label for="streaming">Streaming onde a série é exibida:</label>
-        <input type="text" id="streaming" value="Disney+">
+        <input
+            type="text"
+            id="streaming"
+            placeholder="Ex: Disney+"
+        >
 
         <label for="autor">Autor ou criador:</label>
-        <input type="text" id="autor" value="Christopher Lloyd e Steven Levitan">
+        <input
+            type="text"
+            id="autor"
+            placeholder="Ex: Christopher Lloyd e Steven Levitan"
+        >
 
         <label for="temporadas">Quantidade de temporadas:</label>
-        <input type="number" id="temporadas" value="11">
+        <input
+            type="number"
+            id="temporadas"
+            placeholder="Ex: 11"
+        >
 
         <label for="ano">Ano de criação:</label>
-        <input type="number" id="ano" value="2009">
+        <input
+            type="number"
+            id="ano"
+            placeholder="Ex: 2009"
+        >
 
         <label for="personagem1">Personagem 1:</label>
-        <input type="text" id="personagem1" value="Jay Pritchett">
+        <input
+            type="text"
+            id="personagem1"
+            placeholder="Ex: Jay Pritchett"
+        >
 
         <label for="personagem2">Personagem 2:</label>
-        <input type="text" id="personagem2" value="Claire Dunphy">
+        <input
+            type="text"
+            id="personagem2"
+            placeholder="Ex: Claire Dunphy"
+        >
 
         <label for="personagem3">Personagem 3:</label>
-        <input type="text" id="personagem3" value="Phil Dunphy">
+        <input
+            type="text"
+            id="personagem3"
+            placeholder="Ex: Phil Dunphy"
+        >
 
 
         <button onclick="salvar()">Salvar</button>
@@ -121,7 +157,7 @@
         let serie = {};
 
 
-    
+        
         function salvar() {
 
             serie.nome = document.getElementById("nome").value;
@@ -166,7 +202,7 @@
 
                 "<strong>Streaming:</strong> " + serie.streaming + "<br>" +
 
-                "<strong>Criadores:</strong> " + serie.autor + "<br>" +
+                "<strong>Criador:</strong> " + serie.autor + "<br>" +
 
                 "<strong>Temporadas:</strong> " + serie.temporadas + "<br>" +
 
@@ -201,6 +237,4 @@
 
 </body>
 
-</html>
-</body>
 </html>
